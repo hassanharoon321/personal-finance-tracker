@@ -1,38 +1,225 @@
-.App {
+/* Background for the entire application */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #b8bed1, #7791c1); /* A more professional gradient */
+  color: #333;
+  min-height: 100vh; /* Ensure the body takes up the full height of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content from the top */
+}
+
+/* Container for all content */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(248, 248, 248, 0.9); /* Slight transparency to let the background shine through */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Subtle shadow for a more lifted look */
+  border-radius: 10px; /* Slightly larger rounding for a softer look */
+  margin-top: 50px; /* Space from the top */
+}
+
+.stylish-heading {
+  font-size: 3.5rem; /* Larger font size */
+  font-weight: bold; /* Make the font bold */
   text-align: center;
+  background: linear-gradient(to right, #00c6ff, #1b4476); /* Gradient background */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* This makes the gradient visible */
+  
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* 3D effect with shadow */
+  
+  /* Optionally, give it more spacing */
+  margin-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+/* Styling the section titles */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+/* Styling for totals, balance, and numbers */
+.totals h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.positive {
+  color: #28a745;
+}
+
+.negative {
+  color: #dc3545;
+}
+
+/* Styling for charts */
+.chart-wrapper {
+  margin: 30px 0;
+}
+
+/* Button styling */
+
+/* Style for Add Entry button */
+.add-entry {
+  padding: 12px 20px;
+  margin-top: 20px; /* Moves the button lower */
+  background-color: #0072ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Input and Select styling */
+input, select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  width: 100%; /* Full width on smaller screens */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+form label {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Adds spacing between sections */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content */
+}
+
+/* Card-like styling */
+.stylish-card {
+  background-color: white; /* White background for a clean look */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Card shadow */
+  margin-bottom: 20px; /* Space between cards */
+}
+
+/* Overview section (Total Income, Expense, Balance) */
+.overview-section h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient effect */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.totals h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* Styling for positive numbers */
+.positive {
+  color: #28a745; /* Green for positive values */
+}
+
+/* Styling for negative numbers */
+.negative {
+  color: #dc3545; /* Red for negative values */
+}
+
+/* Balance styling with 3D-like text-shadow */
+.balance {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Charts Section */
+.charts-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers charts horizontally */
+  gap: 30px; /* Space between the two charts */
+}
+
+.chart-wrapper {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Add hover effect for interactivity */
+.stylish-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  transition: transform 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Chart Titles */
+.charts-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  form {
+    gap: 10px;
+  }
+
+  form label {
+    font-size: 0.9rem;
   }
 }
